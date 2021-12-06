@@ -9,14 +9,14 @@
  	http://www.springframework.org/schema/context
  	http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<content:annotation-config /> <!-- to enable all annotations -->
+	<content:annotation-config /> <!--  to enable all annotations -->
 
 	<bean class="com.rvce.prog6.Address" name="addr1">
 		<property name="street" value="govind nagar" />
 		<property name="city" value="kanpur" />
 	</bean>
 
-	<!-- XML Based Autowiring here we have done  -->
-	<bean class="com.rvce.prog6.Emp" name="emp1" autowire="constructor"/>
 
+	<bean class="com.rvce.prog6.Emp" name="emp1" />
+		
 </beans>
