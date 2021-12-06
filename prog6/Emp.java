@@ -1,4 +1,4 @@
-package com.rvce.prog7;
+package com.rvce.prog6;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
