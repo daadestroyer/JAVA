@@ -1,4 +1,4 @@
-package com.rvce.prog7;
+package com.rvce.prog6;
 
 public class Address {
 	private String street;
