@@ -1,8 +1,19 @@
-package com.rvce.prog6;
+package com.rvce.prog7;
 
 public class Address {
 	private String street;
 	private String city;
+
+	public Address() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Address(String street, String city) {
+		super();
+		this.street = street;
+		this.city = city;
+	}
 
 	public String getstreet() {
 		return street;
