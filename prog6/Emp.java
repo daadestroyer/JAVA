@@ -1,10 +1,9 @@
 package com.rvce.prog6;
 
-import org.springframework.beans.factory.annotation.Autowired;
 
 public class Emp {
 	
-	@Autowired 	
+	
 	private Address address;
 
 	public Address getAddress() {
