@@ -25,6 +25,10 @@ public class App {
 		System.out.println("***************************");
 
 		SessionFactory sessionfactory = new Configuration().configure().buildSessionFactory();
+		Session openSession = sessionfactory.openSession();
+		// start transaction
+		Transaction txn = openSession.beginTransaction();
+		
 		Scanner sc = new Scanner(System.in);
 
 		while (true) {
@@ -42,10 +46,7 @@ public class App {
 			 
 			int ch = sc.nextInt();
 			// starting session
-			Session openSession = sessionfactory.openSession();
-
-			// start transaction
-			Transaction txn = openSession.beginTransaction();
+			
 			if (ch == 1) {
 				System.out.println("Enter usn");
 				String usn = sc.next();
