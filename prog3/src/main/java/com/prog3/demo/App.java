@@ -62,7 +62,9 @@ public class App {
 
 				Student student = new Student(usn, name, course, city);
 				openSession.save(student);
-				txn.commit();
+				if(txn.getStatus().equals(TransactionStatus.ACTIVE)) {
+						txn.commit();
+					}
 				
 				
 			} else if (ch == 2) {
@@ -76,7 +78,9 @@ public class App {
 				}
 				else {
 					openSession.delete(student);
-					txn.commit();
+					if(txn.getStatus().equals(TransactionStatus.ACTIVE)) {
+						txn.commit();
+					}
 					System.out.println("\n");
 					System.out.println("Student with usn "+usn+" deleted...");
 				}
@@ -96,8 +100,9 @@ public class App {
 				System.out.println("Student City :"+student.getCity());
 				System.out.println("-----------------------------------------------");
 				System.out.println("\n");
-				// commiting into db
-				txn.commit();
+				if(txn.getStatus().equals(TransactionStatus.ACTIVE)) {
+						txn.commit();
+					}
 			} 
 			else if(ch == 4) {
 				List list = openSession.createQuery("from Student").list();
@@ -116,8 +121,9 @@ public class App {
 				}
 				System.out.println("\n");
 				
-				// commiting into db
-				txn.commit();
+				if(txn.getStatus().equals(TransactionStatus.ACTIVE)) {
+						txn.commit();
+					}
 				
 				
 			}
