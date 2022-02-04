@@ -9,7 +9,7 @@ public class Client {
 		try {
 			for (int i = 0; i < 10; i++) {
 				String s = client.get().getResponseText();
-				System.out.println(s);
+				System.out.println(s+"= "+(5*i)+" Degree Celcius");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
